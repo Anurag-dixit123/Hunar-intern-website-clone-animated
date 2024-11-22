@@ -1,0 +1,833 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f2f4fa;
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#header {
+  height: 20vh;
+  width: 100%;
+}
+
+#header #navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+#navbar #nav-img img {
+  height: 15vh;
+  width: auto;
+  margin-left: 1rem; /* Adjusted for responsiveness */
+  object-fit: cover;
+  padding-top: 1rem;
+  padding-left: 2rem; /* Adjusted for responsiveness */
+}
+
+#navbar #nav-headings {
+  font-size: 1.5rem;
+  width: 45%;
+  padding-top: 3rem; /* Adjusted for responsiveness */
+  font-weight: 900;
+  display: flex;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+#nav-headings h4 {
+  color: #000;
+}
+
+#main #page1 {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7.5rem; /* 120px */
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 0.6;
+  text-transform: uppercase;
+  margin-right: 1rem; /* Adjusted for responsiveness */
+  margin-top: 1rem; /* Adjusted for responsiveness */
+}
+
+#home-logo img {
+  height: 95vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+#page1 .span h4 {
+  margin-top: 1rem; /* Adjusted for responsiveness */
+  font-weight: 400;
+  color: #000;
+}
+
+#page1 .span #btns {
+  margin-top: 1.875rem; /* 30px */
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.875rem; /* 60px */
+}
+
+#register,
+#courses {
+  height: 3.25rem; /* 52px */
+  font-size: 0.8rem;
+  width: 130px;
+  font-weight: 700;
+  border: none;
+}
+
+#register {
+  background-color: #0975f1;
+  color: white;
+}
+
+#courses {
+  border: 2px solid black;
+}
+
+#register:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+  background-color: #1dd7dd;
+}
+
+#courses:hover {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.sp-color1 {
+  color: #0d1f3a;
+}
+
+.sp-color2 {
+  color: #fb275a;
+}
+
+#page2 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 1;
+}
+
+#page2 #page2-img {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#page2-img img {
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+  padding: 1.5625rem; /* 25px */
+  margin-top: 1.25rem; /* 20px */
+}
+
+#page2 h3 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  font-weight: 500;
+  color: rgba(109, 104, 104, 0.877);
+  text-transform: uppercase;
+}
+
+#page3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.posters {
+  padding: 3.125rem 7.5rem; /* 50px 120px */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.875rem; /* 30 px */
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.poster img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s;
+}
+
+.poster:hover img {
+  filter: brightness(0.8);
+}
+
+#page3heading {
+  margin-top: 6.25rem; /* 100px */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#page3heading h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: rgba(80, 75, 75, 0.877);
+  text-transform: uppercase;
+}
+
+#page3heading h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.black-heading {
+  color: #2b2828;
+  font-weight: 700;
+}
+
+.blue-heading {
+  color: #007bff;
+}
+
+.poster-button {
+  position: absolute;
+  bottom: 0.625rem; /* 10px */
+  right: 0.125rem; /* 2px */
+  font-size: 1.2rem;
+  padding: 0.625rem 1.5625rem; /* 10px 25px */
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.3125rem; /* 5px */
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(12.5rem); /* 200px */
+}
+
+.poster:hover .poster-button {
+  opacity: 1;
+  transform: translateY(-6.25rem); /* -100px */
+}
+
+#btn-internship {
+  height: 3.125rem; /* 50px */
+  font-size: 1.25rem; /* 20px */
+  width: 15.625rem; /* 250px */
+  text-transform: uppercase;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  border-radius: 0.3125rem; /* 5px */
+  font-weight: 900;
+}
+
+#btn-internship:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+#page4 {
+  height: 70vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bg-image {
+  background-image: url("Assets/images/blue-background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image-headings {
+  margin-top: 5rem; /* 80px */
+}
+
+.bg-image-headings h1 {
+  color: #fff;
+  font-size: 2.25rem; /* 36px */
+  text-transform: uppercase;
+}
+
+.bg-image-headings h4 {
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#page4icon {
+  background-color: transparent;
+  height: 100%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-image-headings,
+.fa-solid,
+h2,
+h4 {
+  color: #fff;
+  background-color: transparent;
+}
+
+.bg-image-headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#page4icon {
+  background-color: transparent;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.icon-box {
+  background-color: transparent;
+  text-align: center;
+}
+
+.fa-solid {
+  font-size: 2.7rem;
+}
+
+.icon-box h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.icon-box h4 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 2.1875rem; /* 35px */
+  line-height: 25px;
+}
+
+#page5 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(54, 89 , 218, 0.08);
+}
+
+.container2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.span2 {
+  min-height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-transform: uppercase;
+  padding: 6.25rem 6.25rem; /* 100px */
+}
+
+.sp-color3 {
+  color: #0d1f3a;
+  font-size: 3em;
+  line-height: 0.3;
+}
+
+.sp-color4 {
+  color: #fb275a;
+  font-size: 3rem;
+  line-height: 0.3;
+}
+
+.span2 h3 {
+  margin-top: 1.875rem; /* 30px */
+  font-weight: 600;
+}
+
+.span2 p {
+  margin-top: 0.625rem; /* 10px */
+  margin: 2.5rem 3.75rem 2.5rem 0; /* 40px 60px 40px 0px */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: normal;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+#learnMore {
+  margin-top: 0.625rem; /* 10px */
+  height: 3.25rem; /* 52px */
+  font-size: 1rem;
+  width: 130px;
+  font-weight: 700;
+  border: none;
+  border: 2px solid black;
+  text-transform: uppercase;
+}
+
+#learnMore:hover {
+  transform: scale(1.1);
+  background-color: #e62535;
+}
+
+#page6 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 6.25rem; /* 100px */
+}
+
+.swiper {
+  height: 100vh;
+  width: 65%;
+  padding: 1.875rem; /* 30px */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.swiper-wrapper {
+  height: 70vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.swiper-headings {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.swiper-headings h1 {
+  font-size: 3rem;
+}
+
+.swiper-headings h3 {
+  font-weight: 500;
+  color: rgba(36, 34, 34, 0.44);
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.swiper-slide img {
+  height: 9.375rem; /* 150px */
+  width: 9.375rem; /* 150px */
+  border-radius: 50%;
+  object-fit: contain;
+  margin-top: 1.875rem; /* 30px */
+}
+
+.swiper-slide h1 {
+  color: white;
+  background-color: transparent;
+  text-align: start;
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 2.5rem; /* 40px */
+}
+
+#slide1 {
+  background-color: rgb(10, 10, 48);
+}
+
+#slide2 {
+  background-color: rgb(31, 189, 65);
+}
+
+#slide3 {
+  background-color: rgb(233, 120, 14);
+}
+
+#slide4 {
+  background-color: rgb(13, 69, 255);
+}
+
+#slide5 {
+  background-color: rgb(255, 0, 106);
+}
+
+.rating {
+  color: gold; /* Change to your preferred color */
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.rating i {
+  margin: 0 0.125rem; /* Adjust space between stars */
+  background-color: transparent;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  height: 3.125rem; /* 50px */
+  width: 3.125rem; /* 50px */
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  margin-top: 1.875rem; /* 30px */
+  font-size: 1.25rem; /* 20px */
+  background-size:  50px 50px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem; /* Adjust the font size for the arrow icons */
+  line-height: 2.5rem; /* Center the icon vertically */
+}
+
+/* Optional: Adjust the position of the buttons */
+.swiper-button-next {
+  right: 0.625rem; /* Position the next button */
+}
+
+.swiper-button-prev {
+  left: 0.625rem; /* Position the previous button */
+}
+
+#page7 {
+  position: relative; /* Establishes a positioning context for absolute children */
+  height: 100%; /* Full viewport height */
+  width: 100%; /* Full width */
+  background-color: #0F1722; /* Background color */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center content */
+  overflow: visible; /* Allow overflow */
+}
+
+#bg-image2 {
+  background-image: url("Assets/images/blue-background.png"); /* Background image */
+  background-size: cover; /* Ensure the image covers the area */
+  background-position: center; /* Center the image */
+  height: 55vh; /* Height of the image */
+  width: 80%; /* Width of the image */
+  position: absolute; /* Position it absolutely */
+  top: -10vh; /* Move it upwards */
+  left: 10%; /* Center it horizontally if needed */
+  display: flex;
+  flex-direction: column; /* Stack the text vertically */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#img-headings,
+#img-btns,
+h1 {
+  background-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#img-headings h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#img-btns {
+  display: flex;
+  height: 3.125rem; /* 50px */
+  width: 25rem; /* 400px */
+  justify-content: space-evenly;
+  margin-bottom: 2.5rem; /* 40px */
+  background-color: transparent;
+}
+
+#img-register,
+#img-contact {
+  height: 3.4375rem; /* 55px */
+  width: 7.5rem; /* 120px */
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#img-contact {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+#img-register:hover,
+#img-contact:hover {
+  background-color: #dd1f3e;
+  color: #fff;
+}
+
+#main-div2 {
+  height: 100%;
+  width: 80vw;
+  display: flex;
+  margin-top: 25rem; /* 400px */
+  background: transparent;
+  justify-content: space-between;
+  gap: 3.125rem; /* 50px */
+}
+
+#div1 {
+  height: 50vh;
+  width: 41vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  margin-bottom: 12.5rem; /* 200px */
+  text-transform: uppercase;
+}
+
+#div1-heading {
+  font-weight: 400;
+  line-height: 1.4;
+  word-spacing: 1;
+}
+
+#div1-img {
+  height: 6.25rem; /* 100px */
+  width: 12.5rem; /* 200px */
+  object-fit: contain;
+  background: transparent;
+}
+
+.icons2 {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.icons2 a {
+  background: transparent;
+}
+
+.icons2 i {
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+}
+
+#div2 {
+  height: 50vh;
+  width: 41vw;
+  margin-bottom: 12.5rem; /* 200px */
+  display: flex;
+  background-color: transparent;
+}
+
+#part1,
+#part2 {
+  height: 50vh;
+  width: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+.part-button {
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  color: #fff;
+}
+
+.part-button:hover {
+  color: #e62535;
+  transform: scale(1 .3);
+}
+
+#footer {
+  background-color: transparent;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+/* Responsive Adjustments for Mobile & Tablet Screens */
+@media screen and (max-width: 1024px) {
+  #navbar #nav-img img {
+    height: 10vh; /* Adjusted for smaller screens */
+    padding-left: 1rem; /* Adjusted for smaller screens */
+  }
+
+  #navbar #nav-headings {
+    font-size: 1.2rem; /* Adjusted for smaller screens */
+    padding-top: 1rem; /* Adjusted for smaller screens */
+  }
+
+  #main #page1 {
+    margin-bottom: 5rem; /* Adjusted for smaller screens */
+  }
+
+  span {
+    font-size: 3rem; /* Adjusted for smaller screens */
+  }
+
+  #home-logo img {
+    height: 70vh; /* Adjusted for smaller screens */
+  }
+
+  #page1 .span #btns {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 1rem; /* Adjusted for smaller screens */
+  }
+
+  .posters {
+    padding: 1.25rem; /* Adjusted for smaller screens */
+    grid-template-columns: repeat(2, 1fr); /* Adjusted for smaller screens */
+  }
+
+  #page3heading h1 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+
+  #page3heading h4 {
+    font-size: 0.8rem; /* Adjusted for smaller screens */
+  }
+
+  .swiper {
+    width: 100%; /* Full width on smaller screens */
+    padding: 1rem; /* Adjusted for smaller screens */
+  }
+
+  .swiper-slide img {
+    height: 6rem; /* Adjusted for smaller screens */
+    width: 6rem; /* Adjusted for smaller screens */
+  }
+
+  #img-btns {
+    width: 100%; /* Full width on smaller screens */
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  #img-register,
+  #img-contact {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  #main-div2 {
+    flex-direction: column; /* Stack divs vertically */
+    margin-top: 2rem; /* Adjusted for smaller screens */
+  }
+
+  #div1,
+  #div2 {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  #part1,
+  #part2 {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar #nav-headings {
+    font-size: 1rem; /* Further adjust for mobile */
+  }
+
+  span {
+    font-size: 2.5rem; /* Further adjust for mobile */
+  }
+
+  #home-logo img {
+    height: 50vh; /* Further adjust for mobile */
+  }
+
+  .posters {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  #page3heading h1 {
+    font-size: 1.5rem; /* Further adjust for mobile */
+  }
+
+  #page3heading h4 {
+    font-size: 0.7rem; /* Further adjust for mobile */
+  }
+
+  .swiper-slide img {
+    height: 5rem; /* Further adjust for mobile */
+    width: 5rem; /* Further adjust for mobile */
+  }
+
+  #img-btns {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  #main-div2 {
+    flex-direction: column; /* Stack divs vertically */
+  }
+
+  #div1,
+  #div2 {
+    width: 100%; /* Full width on mobile */
+  }
+
+  #part1,
+  #part2 {
+    width: 100%; /* Full width on mobile */
+  }
+}
