@@ -32,6 +32,6 @@ GSAP and ScrollTrigger for animations.
 Locomotive Scroll for smooth scrolling.
 Swiper for the client review slider.
 Demo:
-You can view the live demo of this website by visiting the deployed link (if available).
+You can view the live demo of this website by visiting the deployed link https://anurag-dixit123.github.io/Hunar-intern-website-clone-animated/.
 
 ![Screenshot (49)](https://github.com/user-attachments/assets/18d3ddf5-18ff-4b93-a775-1039e729b398)
